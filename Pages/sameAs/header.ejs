@@ -1,0 +1,39 @@
+<header>
+    <div class="logo">
+        <a href="/">
+            <h4>Bl<span>o</span>g</h4>
+        </a>
+    </div>
+    <nav>
+        <div>
+           <div class="title">
+               <a href="/">Home</a>
+           </div>
+        </div>
+        <div class="project" href="">
+            <div class="title">
+                <a href="/projects">
+                    Projects
+                    <ion-icon name="chevron-down-outline"></ion-icon>                    
+                </a>
+            </div>
+            <ul class="projects">
+                <% if (projects.length> 0) { %>
+                    <% projects.forEach(project => { %>
+                        <li><a href="/projects"> <%= project.title %> </a></li>
+                <% }) %>
+                <% } %>
+            </ul>
+        </div>
+        <div href="">    
+            <div class="title">
+                <a href="/about">About</a>  
+            </div>
+        </div>
+        <div href="">
+            <div class="title">
+                <a href="/contact">Contact</a>
+            </div>
+        </div>
+    </nav>
+</header>

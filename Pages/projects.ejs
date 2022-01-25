@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <%- include('./sameAs/head.ejs') %>
+
+<body>
+    
+    <%- include('./sameAs/header.ejs') %>
+
+    <section>
+        <div class="projects">
+            <% if (projects.length > 0) { %>
+                <h1>All projects</h1>
+                <% projects.forEach(project => { %>
+                    <div class="project">
+                        <h4> <%= project.title %> </h4>
+                        <p>Author: <a href="#"> <%= project.author %> </a></p>
+                        <p> <%= project.des %> </p>
+                    </div>
+                <% }) %>
+            <% } else { %>
+                <h1>OOPS......!</h1>
+                <p>There is no projects to display.....</p>
+            <% } %> 
+        </div>
+    </section>
+
+    <%- include('./sameAs/footer.ejs') %>
+
+</body>
+</html>

@@ -1,0 +1,386 @@
+ /* universal style */
+ * {
+    margin: 0;
+    padding: 0;
+    text-align: justify;
+    font-family: sans-serif;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+body {
+    background-color: wheat;
+}
+html {
+    font-size: 62.5%;
+}
+:root {
+    --black:#000;
+    --white:#fff;
+    --lightblue:rgb(47, 47, 218);
+    --red:red;
+    --lightred:rgb(233, 69, 69);
+}
+/* ======================================================================================================== */
+
+/* Style for header of the website */
+header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    z-index: 1;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: red;
+}
+header .logo a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+header .logo a h4 {
+    color: #fff;
+    font-size: 3rem;
+    font-weight: 900;
+}
+header .logo a h4 span {
+    color: rgba(0,0,0,0.6);
+    font-size: 2rem ;
+    animation: round 1s linear infinite;
+}
+header nav {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+header nav div {
+    color: #fff;
+    margin:5px;
+}
+header nav div .title a {
+    color: #fff;
+    padding: 10px;
+    display: flex;
+    font-size: 1.2rem;
+    transition: 0.5s;
+    text-decoration: none;
+}
+header nav div:hover .title a {
+    color: var(--red);
+    border-radius: 10px;
+    background-color: var(--white);
+}
+header nav div ul {
+    position: absolute;
+    width: 35%;
+    z-index: 100000;
+    margin-top: 50px;
+    display: flex;
+    border-radius: 5px;
+    align-items: left;
+    flex-direction: column;
+    height: 0px;
+    opacity: 0;
+    justify-content: flex-start;
+    background-color: var(--white);
+    box-shadow: 0px 0px 5px var(--black);
+    overflow: hidden;
+    transition: ease-in-out 0.4s;
+}
+header nav div .title a ion-icon {
+    color: var(--white);
+    font-size: 1.3rem;
+}
+header nav div:hover .title a ion-icon {
+    color: var(--black);
+    font-size: 1.3rem;
+    transform: rotateX(180deg);
+}
+header nav div ul li a {
+    width: 100%;
+    font-size: 1rem;
+    line-height: 50px;
+    padding: 20px 25px;
+    font-weight: 400;
+    transition: 0.5s;
+    text-decoration: none;
+    text-transform: capitalize;
+    color: var(--red);
+}
+header nav div ul li:hover a {
+    margin-left: 10px;
+}
+header nav div li:hover  {
+    width: 100%;
+    background-color: rgba(0,0,0,0.1);
+}
+header nav div.project:hover .projects {
+    height: 150px;
+    margin-top: 0px;
+    opacity: 1;
+}
+header .Contact a {
+    border-radius: 10px;
+    padding: 10px 30px;
+    text-decoration: none;
+    color: var(--white);
+    transition: 0.5s;
+    font-size: 1.5rem;
+    background-color: var(--red);
+    border-radius: 5px;
+}   
+header .Contact a:hover {
+    color: var(--red);
+    background-color: var(--white);
+}
+/* ======================================================================================================== */
+
+/* Style for all the sections tag of the website */
+section {
+    position: relative;
+    left: 0;
+    top: 0;
+    gap: 20px;
+    width: 100%;
+    margin-top: 50px;
+    padding: 100px 50px;
+    display: flex;
+    min-height: 82vh;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+section h1 {
+    color: var(--red);
+    font-size: 3rem;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+section h4 {
+    font-size: 2rem;
+    font-weight: 900;
+    text-align: center;
+    text-transform: capitalize;
+}
+section p {
+    color: grey;
+    font-size: 1.3rem;
+    text-align: center;
+}
+section .projects  {
+    gap: 20px;
+    width: 100%;
+    padding: 0px 50px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+section .projects .project {
+    width: calc(100% - 150px );
+    gap: 10px;
+    padding: 20px;
+    display: flex;
+    transition: 0.5s;
+    cursor: pointer;
+    border-radius: 10px;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+    background: var(--white);
+    box-shadow: 2px 0px 4px lightgray;
+}
+/* section .blogs .blog p {
+    text-align: left;
+} */
+section .projects .project:hover {
+    transform: scale(1.01);
+    box-shadow: 0px 0px 1px gray;
+}
+section .projects .project p {
+    color: grey;
+    font-size: 1.3rem;
+    text-align: left;
+}
+section .projects .project p a {
+    color: var(--red);
+    font-size: 1.3rem;
+    text-decoration: none;
+}
+/* ======================================================================================================== */
+
+/* Style for the About section of the website */
+.About {
+    gap: 100px;
+    padding: 0;
+}
+.About .space,
+.About .space .img-box,
+.About .space .description {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.About .space .img-box {
+    height: 280px;
+    width: 100%;
+    overflow: hidden;
+}
+.About .space .img-box h1 {
+    position: absolute;
+}
+.About .space .description {
+    gap: 20px;
+    padding: 20px 50px;
+    background: var(--white);
+    justify-content: flex-start;
+}
+.About .space .description p {
+    color: grey;
+    font-size: 1.3rem;
+    text-align: justify;
+}
+.About .space .description p span {
+    color: red;
+    font-style: italic;
+    font-weight: 900;
+}
+/* ======================================================================================================== */
+
+/* Style for the Create a blog page of the website */
+.Create {
+    gap: 50px;
+    padding: 90px;
+    flex-direction: row;
+    align-items: center;
+}
+.Create h1 {
+    text-align: center;
+    text-transform: capitalize;
+}
+.Create form {
+    gap: 10px;
+    width: 100%;
+    flex-wrap: wrap;
+    padding: 20px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 20px;
+    background-color: var(--white);
+}
+.Create form p {
+    gap: 5px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.Create form p input,
+.Create form p textarea {
+    padding: 8px 20px;
+    border: none;
+    outline: none;
+    background: rgba(0,0,0,0.1);
+    border-radius: 10px;
+}
+.Create form p textarea {
+    min-height: 100px;
+    max-height: 170px;
+    min-width: 90%;
+    max-width: 100%;
+}
+.Create form p label {
+    color: var(--red);
+}
+.Create form  input[id="submit-btn"] {
+    color: var(--white);
+    padding: 8px 20px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: var(--red);
+}
+/* ======================================================================================================== */
+
+/* Style for the footer of the website */
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    background-color: red;
+}
+footer p {
+    color: var(--white);
+    font-size: 1.3rem;
+    font-weight: 400;
+    text-align: center;
+}
+footer p a {
+    color: var(--white);
+    font-weight: 900;
+    letter-spacing: 1px;
+    text-decoration: none;
+}
+footer p a:hover {
+    text-decoration: underline;
+}
+#weava-ui-wrapper {
+    display: none;
+}
+/* ======================================================================================================== */
+
+/* Respomsive style  */
+@media screen and (max-width:1000px) {
+    section {
+        padding: 20px 10px;
+        flex-direction: column;
+    }
+    section h1 {
+        text-align: center;
+    }
+    section p {
+        text-align: center;
+    }
+    section .blogs .blog p {
+        color: grey;
+        font-size: 1.3rem;
+        text-align: justify;
+    }
+    section .blogs,
+    section .blogs .blog,
+    .Create,
+    .About .space .description {
+        width: 100%;
+        padding: 50px 10px;
+        flex-direction: column;
+    }
+    header nav {
+        display: none;
+        padding: 0;
+        margin: auto;
+        align-items: flex-start;
+        flex-direction: column;
+    }
+    header nav div ul {
+        padding: 0;
+        margin: auto;
+        position: relative;
+        width: 100%;
+    }
+}
